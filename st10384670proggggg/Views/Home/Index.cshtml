@@ -1,33 +1,55 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "CMCS Contract Monthly Claim System Report";
 }
 
 <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center"
      style="background: linear-gradient(135deg, #74ebd5, #ACB6E5); color: #fff;">
 
+    <!-- Header with Dropdown -->
+    <div class="container mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="fw-bold animate__animated animate__fadeInDown">
+                📊 CMCS Contract Monthly Claim System Report
+            </h1>
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <button class="btn btn-light text-dark fw-bold rounded-pill dropdown-toggle shadow"
+                        type="button" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    🌐 Menu
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+                    <li><a class="dropdown-item" asp-controller="Docs" asp-action="Index">📂 Documents</a></li>
+                    <li><a class="dropdown-item" href="https://learn.microsoft.com/aspnet/core" target="_blank">📘 Learn ASP.NET Core</a></li>
+                    <li><a class="dropdown-item" href="#">⚙️ Settings</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item text-danger" href="#">🚪 Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
-            👋 Welcome to Our App
-        </h1>
         <p class="lead mb-5 animate__animated animate__fadeInUp">
-            Learn, build, and explore with <strong>ASP.NET Core MVC</strong>.
-            Your journey to modern web development starts here!
+            Welcome to the <strong>CMCS Contract Monthly Claim System</strong>.<br />
+            Easily manage, track, and generate monthly claim reports with style!
         </p>
 
         <div class="d-flex justify-content-center gap-3">
+            <a asp-controller="Docs" asp-action="Index"
+               class="btn btn-lg btn-dark shadow fw-bold px-4 py-2 rounded-pill">
+                📂 View Claims
+            </a>
             <a href="https://learn.microsoft.com/aspnet/core"
                target="_blank"
-               class="btn btn-lg btn-light text-dark shadow fw-bold px-4 py-2">
+               class="btn btn-lg btn-light text-dark shadow fw-bold px-4 py-2 rounded-pill">
                 📘 Learn ASP.NET Core
-            </a>
-            <a asp-controller="Docs" asp-action="Index"
-               class="btn btn-lg btn-dark shadow fw-bold px-4 py-2">
-                📂 View Documents
             </a>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="mt-auto mb-3 text-white-50">
-        <p>&copy; @DateTime.Now.Year - Built with 💻 ASP.NET Core MVC</p>
+        <p>&copy; @DateTime.Now.Year - CMCS Contract Monthly Claim System Report</p>
     </footer>
 </div>
