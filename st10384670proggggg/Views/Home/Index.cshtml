@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center"
+     style="background: linear-gradient(135deg, #74ebd5, #ACB6E5); color: #fff;">
+
+    <div class="container">
+        <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
+            👋 Welcome to Our App
+        </h1>
+        <p class="lead mb-5 animate__animated animate__fadeInUp">
+            Learn, build, and explore with <strong>ASP.NET Core MVC</strong>.
+            Your journey to modern web development starts here!
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://learn.microsoft.com/aspnet/core"
+               target="_blank"
+               class="btn btn-lg btn-light text-dark shadow fw-bold px-4 py-2">
+                📘 Learn ASP.NET Core
+            </a>
+            <a asp-controller="Docs" asp-action="Index"
+               class="btn btn-lg btn-dark shadow fw-bold px-4 py-2">
+                📂 View Documents
+            </a>
+        </div>
+    </div>
+
+    <footer class="mt-auto mb-3 text-white-50">
+        <p>&copy; @DateTime.Now.Year - Built with 💻 ASP.NET Core MVC</p>
+    </footer>
+</div>
